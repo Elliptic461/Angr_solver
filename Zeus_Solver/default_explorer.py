@@ -10,7 +10,7 @@ logging.getLogger('angr').setLevel(logging.WARNING)
 #Load binary
 proj = angr.Project(binary)
 
-# Use BFS, filling in any uninitialized memory or registers
+# Filling in any uninitialized memory or registers
 state = proj.factory.entry_state( 
     add_options={
         angr.options.SYMBOL_FILL_UNCONSTRAINED_MEMORY,
